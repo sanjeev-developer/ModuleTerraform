@@ -35,7 +35,7 @@ resource "aws_autoscaling_group" "aws_auto_group" {
   max_size           = 2
   min_size           = 1
   vpc_zone_identifier  = [var.subnet_id_01, var.subnet_id_02] // we can attach single or multiple subnet in auto scaling
-  target_group_arns    = [var.lb_target_group]
+  target_group_arns    = [var.lb_target_group] // attaching load balancer to auto scaling
 
 
 launch_template {
